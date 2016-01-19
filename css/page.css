@@ -5,3 +5,15 @@ body {
   font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #222; 
 }
+
+code {
+	font-family: "Droid Sans Mono", "Courier New", Courier, monospace;
+}
+
+.hide {
+	display: none;
+}
+
+.activities > h4 {
+	margin-top: 5%;
+}
