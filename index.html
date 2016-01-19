@@ -15,13 +15,19 @@
 
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,400italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,400italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/page.css">
+
+  <!-- JS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="calc.js"></script>
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– 
@@ -33,11 +39,72 @@
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
-    <div class="row">
-      <div class="one-half column" style="margin-top: 25%">
-        <h4>Fitness Testing</h4>
+
+    <!-- Select Activity Type
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="row" style="margin-top: 15%">
+      <div class="twelve columns">
+        <h1>BMR Mileage Calculator</h1>
+        <p>To use the calculator, first select the type of activity you are logging from the options below:</p>
+
+        <div class="activities">
+          <div class="row">
+            <div class="one-half column">
+              <h4>Fitness Testing</h4>
+              <input class="button" type="button" value="Timed Mile" onclick="showForm('#ftMiles');">
+              <input class="button" type="button" value="PACER Test" onclick="showForm('#ftPacer');">
+            </div>
+
+            <div class="one-half column">
+              <h4>Warmup Laps or Fitness</h4>
+              <input class="button" type="button" value="Option" onclick="showForm('#option');">
+            </div>
+          </div>
+
+
+        </div>        
       </div>
     </div>
+
+      <!-- Calculator Forms
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="row">
+      <div class="one-half column hide" id="ftMiles">
+        <h4>Fitness Testing - Timed Mile</h4>
+        <form onsubmit="return ftMilesCalc()">
+          <label for="numFtMiles">Number of students</label>
+          <input class="u-full-width" type="number" id="numFtMiles">
+          
+          <input class="button-primary" type="submit" value="Calculate">
+        </form>
+      </div>
+
+      <div class="one-half column hide" id="ftPacer">
+        <h4>Fitness Testing - Pacer Test</h4>
+        <form onsubmit="return ftPacerCalc()">
+          <label for="numFtPacer">Number of students</label>
+          <input class="u-full-width" type="number" id="numFtPacer">
+          <label for="avgLaps">Average Number of Laps Completed</label>
+          <input class="u-full-width" type="number" id="lapFtPacer">
+          <label for="lenFtPacer">PACER Test Length</label>
+          <select class="u-full-width" id="lenFtPacer">
+            <option value="15">15 Meters</option>
+            <option value="20">20 Meters</option>
+          </select>
+          
+          <input class="button-primary" type="submit" value="Calculate">
+        </form>
+      </div>
+    </div>
+
+    <!-- Result
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="row hide" id="result">
+      <div class="twelve column">
+        <h4>Number of Miles: &nbsp; <span id="miles"></span></h4>
+      </div>
+    </div>
+
   </div>
 
 <!-- End Document
