@@ -65,8 +65,8 @@ function pedomCalc () {
 	if (tall >= 1)  {
 		tall = tall / 100;
 	}
-	tallMiles = tall * num * dist * 2500;
-	shortSteps = (1 - tall) * num * dist * 2000;
+	tallMiles = tall * num * dist / 2500;
+	shortSteps = (1 - tall) * num * dist / 2000;
 	calc = Math.floor(tallMiles) + Math.floor(shortSteps);
 	return displayMiles(calc);
 
