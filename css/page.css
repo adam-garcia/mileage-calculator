@@ -7,20 +7,20 @@ body {
 }
 
 code {
-	font-family: "Droid Sans Mono", "Courier New", Courier, monospace;
+  font-family: "Droid Sans Mono", "Courier New", Courier, monospace;
 }
 
 div.calc-app {
-	padding: 5%;
+  padding: 5%;
 }
 
 .hide {
-	display: none;
+  display: none;
 }
 
 .activities > .row {
-	border-bottom: 1px solid lightgrey;
-	margin-top: 1.5rem;
+  border-bottom: 1px solid lightgrey;
+  margin-top: 1.5rem;
 }
 
 
