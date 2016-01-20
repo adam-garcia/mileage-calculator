@@ -85,6 +85,22 @@
             </div>
           </div>
 
+          <div class="row">
+            <div class="two-thirds column">
+              <h4>Walk/ Jogathon</h4>
+              <p>If your students participated in a community fun-run, where time was tracked rather than miles, use this tool. </p>
+              <input class="button" type="button" value="Walk/ Jogathon" onclick="showForm('#walkjog');">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="two-thirds column">
+              <h4>Pedometer-measured activity</h4>
+              <p>If your students track steps with a pedometer, use this tool to estimate their mileage from steps</p>
+              <input class="button" type="button" value="pedometer" onclick="showForm('#pedom');">
+            </div>
+          </div>
+
 <!-- Activity Selector Template
           <div class="row">
             <div class="two-thirds column">
@@ -107,7 +123,7 @@
         <h4>Fitness Testing - Timed Mile</h4>
         <form onsubmit="return ftMilesCalc()">
           <label for="numFtMiles">Number of students</label>
-          <input class="u-full-width" type="number" id="numFtMiles"/>
+          <input required class="u-full-width" type="number" id="numFtMiles"/>
           <label for="distFtMiles">Distance of test</label>
           <select class="u-full-width" id="distFtMiles">
             <option value="1/4">1/4 Mile</option>
@@ -117,7 +133,7 @@
           </select>
           <!-- <input type="range" min="0.25" max="1.5" step="0.25" value="1" id="distFtMiles" /> -->
           <label for="lapsFtMiles">Number of attempts</label>
-          <input class="u-full-width" type="number" id="lapsFtMiles"/>
+          <input required class="u-full-width" type="number" id="lapsFtMiles"/>
           
           <div class="row">
             <div class="one-half column">
@@ -134,9 +150,9 @@
         <h4>Fitness Testing - Pacer Test</h4>
         <form onsubmit="return ftPacerCalc()">
           <label for="numFtPacer">Number of students</label>
-          <input class="u-full-width" type="number" id="numFtPacer">
+          <input required class="u-full-width" type="number" id="numFtPacer">
           <label for="lapFtPacer">Average Number of Laps Completed</label>
-          <input class="u-full-width" type="number" id="lapFtPacer">
+          <input required class="u-full-width" type="number" id="lapFtPacer">
           <label for="lenFtPacer">PACER Test Length</label>
           <select class="u-full-width" id="lenFtPacer">
             <option value="15">15 Meters</option>
@@ -158,9 +174,9 @@
         <h4>Warmup Mileage Calculator</h4>
         <form onsubmit="return warmupCalc()">
           <label for="numWarmup">Number of students</label>
-          <input class="u-full-width" type="number" id="numWarmup">
+          <input required class="u-full-width" type="number" id="numWarmup">
           <label for="durWarmup">Average duration of warmup</label>
-          <input  type="number" step="any" id="durWarmup"> Minutes
+          <input required  type="number" step="any" id="durWarmup"> Minutes
           <label for="paceWarmup">Average pace of warmup</label>
           <select class="u-full-width" id="paceWarmup">
             <option value="30">Walk</option>
@@ -184,9 +200,9 @@
         <h4>Walk to school mileage calculator</h4>
         <form onsubmit="return commuteCalc()">
           <label for="numCommute">Number of students</label>
-          <input class="u-full-width" type="number" id="numCommute">
+          <input required class="u-full-width" type="number" id="numCommute">
           <label for="distCommute">Average distance of walk</label>
-          <input type="number" step="any" id="distCommute"> Miles
+          <input required type="number" step="any" id="distCommute"> Miles
           <label for="dirCommute">Direction</label>
           <select class="u-full-width" id="dirCommute">
             <option value="2">Students walk to and from school</option>
@@ -209,13 +225,62 @@
         <h4>Fun Run mileage calculator</h4>
         <form onsubmit="return funrunCalc()">
           <label for="numFunrun">Number of students participating</label>
-          <input class="u-full-width" type="number" id="numFunrun">
+          <input required class="u-full-width" type="number" id="numFunrun">
           <label for="distFunRun">Distance of run</label>
-          <input type="number" step="any" id="distFunrun">
+          <input required type="number" step="any" id="distFunrun">
           <select id="unitFunrun">
             <option value="mi">Miles</option>
             <option value="km">Kilometers</option>
           </select>
+
+          
+          <div class="row">
+            <div class="one-half column">
+              <input class="button-primary u-full-width" type="submit" value="Calculate">
+            </div>
+            <div class="one-half column">
+              <input class="button u-full-width" type="button" value="go back" onclick="location.reload()">
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="one-half column hide" id="walkjog">
+        <h4></h4>
+        <form onsubmit="return walkjogCalc()">
+          <label for="numWalkjog">Number of students participating</label>
+          <input required class="u-full-width" type="number" id="numWalkjog">
+          <label for="durWalkjog">Average duration</label>
+          <input required type="number" step="any" id="durWalkjog"> Minutes
+          <label for="paceWalkjog">Average pace of walk/ jogathon</label>
+          <select class="u-full-width" id="paceWalkjog">
+            <option value="30">Walk</option>
+            <option value="20">Walk/ Jog</option>
+            <option value="15">Jog</option>
+            <option value="10">Run</option>
+          </select>
+          
+          <div class="row">
+            <div class="one-half column">
+              <input class="button-primary u-full-width" type="submit" value="Calculate">
+            </div>
+            <div class="one-half column">
+              <input class="button u-full-width" type="button" value="go back" onclick="location.reload()">
+            </div>
+          </div>
+        </form>
+      </div>
+
+
+      <div class="one-half column hide" id="pedom">
+        <h4></h4>
+        <form onsubmit="return pedomCalc()">
+          <label for="numPedom">Number of students</label>
+          <input required class="u-full-width" type="number" id="numPedom">
+          <label for="distPedom">Average number of steps</label>
+          <input required class="u-full-width" type="number" id="distPedom">
+          <label for="tallPedom">Percentage of tall students</label>
+          <input required class="u-full-width" type="number" step="any" id="tallPedom">
 
           
           <div class="row">
@@ -258,7 +323,6 @@
         <h4>Number of Miles: &nbsp; <span id="miles"></span></h4>
       </div>
       <a class="button button-primary" href="http://billionmilerace.org/login">Log miles!</a>
-      <!-- <input class="button" type="button" value="go back" onclick="location.reload()"> -->
     </div>
 
   </div>

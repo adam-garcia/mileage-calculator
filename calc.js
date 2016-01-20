@@ -11,8 +11,7 @@ function ftMilesCalc () {
 	var dist = eval($(" #distFtMiles ").val());
 	var laps = eval($(" #lapsFtMiles ").val());
 	$(" #result ").removeClass("hide");
-	displayMiles( calc * dist * laps );
-	return false;
+	return displayMiles( calc * dist * laps );
 }
 
 function ftPacerCalc () {
@@ -20,8 +19,7 @@ function ftPacerCalc () {
 	var lap = eval($( "#lapFtPacer" ).val());
 	var len = eval($( "#lenFtPacer" ).val());
 	calc = Math.floor(num * lap * len / 1600);
-	displayMiles( calc );
-	return false;
+	return displayMiles( calc );
 }
 
 function warmupCalc () {
@@ -29,8 +27,7 @@ function warmupCalc () {
 	var dur = eval($( "#durWarmup" ).val());
 	var pace = 1 / eval($( "#paceWarmup" ).val());
 	calc = Math.floor(num * dur * pace);
-	displayMiles( calc );
-	return false;
+	return displayMiles( calc );
 }
 
 function commuteCalc () {
@@ -38,8 +35,7 @@ function commuteCalc () {
 	var dist = eval($( "#distCommute" ).val());
 	var dir = eval($( "#dirCommute" ).val());
 	calc = Math.floor(num * dist * dir);
-	displayMiles( calc );
-	return false;
+	return displayMiles( calc );
 }
 
 function funrunCalc () {
@@ -51,11 +47,33 @@ function funrunCalc () {
 		weight = 1.60934;
 	}
 	calc = Math.floor(num * dist / weight);
-	displayMiles( calc );
-	return false;
+	return displayMiles( calc );
+}
+
+function walkjogCalc () {
+	var num = eval($( "#numWalkjog" ).val());
+	var dur = eval($( "#durWalkjog" ).val());
+	var pace = 1 / eval($( "#paceWalkjog" ).val());
+	calc = Math.floor(num * dur * pace);
+	return displayMiles( calc );
+}
+
+function pedomCalc () {
+	var num = eval($( "#numPedom" ).val());
+	var dist = eval($( "#distPedom" ).val());
+	var tall = eval($( "#tallPedom" ).val());
+	if (tall >= 1)  {
+		tall = tall / 100;
+	}
+	tallMiles = tall * num * dist * 2500;
+	shortSteps = (1 - tall) * num * dist * 2000;
+	calc = Math.floor(tallMiles) + Math.floor(shortSteps);
+	return displayMiles(calc);
 
 }
+
 function displayMiles (miles) {
 	$(" #result ").removeClass("hide");
 	$(" #miles ").text( miles );
+	return false;
 }
