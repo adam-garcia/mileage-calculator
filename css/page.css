@@ -18,6 +18,10 @@ div.calc-app {
 	display: none;
 }
 
+.activities > .row {
+	border-bottom: 1px solid lightgrey;
+}
+
 .activities > h4 {
 	margin-top: 5%;
 }
