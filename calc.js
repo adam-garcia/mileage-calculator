@@ -3,7 +3,7 @@ var calc = 0;
 function showForm (formID) {
     $(formID).toggleClass("hide");
     $(".activities").toggleClass("hide");
-    console.log(formID);
+    // fries();
 }
 
 function ftMilesCalc () {
@@ -68,6 +68,8 @@ function pedomCalc () {
     tallMiles = tall * num * dist / 2500;
     shortSteps = (1 - tall) * num * dist / 2000;
     calc = Math.floor(tallMiles) + Math.floor(shortSteps);
+    // tabling tall/short proportion for now
+    calc = Math.floor(num * dist / 2500);
     return displayMiles(calc);
 
 }
@@ -77,3 +79,24 @@ function displayMiles (miles) {
     $(" #miles ").text( miles );
     return false;
 }
+
+
+// Working with Push- and Pop-state
+
+// function fries() {
+//   history.pushState( { 
+//     plate_id: 1, 
+//     plate: "Fries" 
+//   }, null, "/plate/fries");
+
+//   showPlate("Fries");
+// }
+
+
+// window.onpopstate = function (event) {  
+//   var content = "";
+//   if(event.state) {
+//     content = event.state.plate;
+//   }
+//   showPlate(content);
+// }
