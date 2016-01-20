@@ -7,16 +7,17 @@ function showForm (formID) {
 }
 
 function ftMilesCalc () {
-	calc = Number($(" #numFtMiles ").val());
+	calc = eval($(" #numFtMiles ").val());
+	var dist = eval($(" #distFtMiles ").val());
 	$(" #result ").removeClass("hide");
-	displayMiles( calc );
+	displayMiles( calc * dist );
 	return false;
 }
 
 function ftPacerCalc () {
-	var num = Number($( "#numFtPacer" ).val());
-	var lap = Number($( "#lapFtPacer" ).val());
-	var len = Number($( "#lenFtPacer" ).val());
+	var num = eval($( "#numFtPacer" ).val());
+	var lap = eval($( "#lapFtPacer" ).val());
+	var len = eval($( "#lenFtPacer" ).val());
 	calc = Math.floor(num * lap * len / 1600);
 	displayMiles( calc );
 	return false;

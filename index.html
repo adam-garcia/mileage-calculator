@@ -38,11 +38,11 @@
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
+  <div class="container-fluid calc-app">
 
     <!-- Select Activity Type
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <div class="row" style="margin-top: 15%">
+    <div class="row">
       <div class="twelve columns">
         <h1>BMR Mileage Calculator</h1>
         <p>To use the calculator, first select the type of activity you are logging from the options below:</p>
@@ -53,6 +53,9 @@
               <h4>Fitness Testing</h4>
               <input class="button" type="button" value="Timed Mile" onclick="showForm('#ftMiles');">
               <input class="button" type="button" value="PACER Test" onclick="showForm('#ftPacer');">
+<!--               <div style="width: 35%; margin: 0 auto">
+              <img src="img/physed.svg" style="width: 100%;">
+              </div> -->
             </div>
 
             <div class="one-half column">
@@ -74,6 +77,13 @@
         <form onsubmit="return ftMilesCalc()">
           <label for="numFtMiles">Number of students</label>
           <input class="u-full-width" type="number" id="numFtMiles">
+          <label for="distFtMiles">Distance of test</label>
+          <select class="u-full-width" id="distFtMiles">
+            <option value="1/4">1/4 Mile</option>
+            <option value="1/2">1/2 Mile</option>
+            <option value="1/1" selected="selected">1 Mile</option>
+          </select>
+
           
           <input class="button-primary" type="submit" value="Calculate">
         </form>
