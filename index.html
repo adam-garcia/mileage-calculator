@@ -77,6 +77,13 @@
         <form onsubmit="return ftMilesCalc()">
           <label for="numFtMiles">Number of students</label>
           <input class="u-full-width" type="number" id="numFtMiles">
+          <label for="distFtMiles">Distance of test</label>
+          <select class="u-full-width" id="distFtMiles">
+            <option value="1/4">1/4 Mile</option>
+            <option value="1/2">1/2 Mile</option>
+            <option value="1/1" selected="selected">1 Mile</option>
+          </select>
+
           
           <input class="button-primary" type="submit" value="Calculate">
         </form>
