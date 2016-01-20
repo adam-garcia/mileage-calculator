@@ -22,3 +22,29 @@ div.calc-app {
 	border-bottom: 1px solid lightgrey;
 	margin-top: 1.5rem;
 }
+
+
+/* Changes to Skeleton Style
+ * * * * * * * * * * * * * * * * * * * * * * * * */
+
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+  color: #FFF;
+  background-color: #12a8dd;
+  border-color: #12a8dd; }
+.button.button-primary:hover,
+button.button-primary:hover,
+input[type="submit"].button-primary:hover,
+input[type="reset"].button-primary:hover,
+input[type="button"].button-primary:hover,
+.button.button-primary:focus,
+button.button-primary:focus,
+input[type="submit"].button-primary:focus,
+input[type="reset"].button-primary:focus,
+input[type="button"].button-primary:focus {
+  color: #FFF;
+  background-color: #1093c1;
+  border-color: #1093c1; }
