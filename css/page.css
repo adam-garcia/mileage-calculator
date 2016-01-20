@@ -11,7 +11,11 @@ code {
 }
 
 div.calc-app {
-  padding: 5%;
+    padding: 2.5%;
+  }
+
+div.calc-form {
+  margin: 0 auto;
 }
 
 .hide {
@@ -23,6 +27,14 @@ div.calc-app {
   margin-top: 1.5rem;
 }
 
+
+/* Media Queries
+ * * * * * * * * * * * * * * * * * * * * * * * * */
+@media (min-width: 550px) {
+  div.calc-app {
+    padding: 5%;
+  }
+}
 
 /* Changes to Skeleton Style
  * * * * * * * * * * * * * * * * * * * * * * * * */
