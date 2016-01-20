@@ -42,6 +42,19 @@ function commuteCalc () {
 	return false;
 }
 
+function funrunCalc () {
+	var num = eval($( "#numFunrun" ).val());
+	var dist = eval($( "#distFunrun" ).val());
+	var unit = $( "#unitFunrun" ).val();
+	var weight = 1;
+	if (unit == "km") {
+		weight = 1.60934;
+	}
+	calc = Math.floor(num * dist / weight);
+	displayMiles( calc );
+	return false;
+
+}
 function displayMiles (miles) {
 	$(" #result ").removeClass("hide");
 	$(" #miles ").text( miles );
