@@ -41,16 +41,17 @@
 
   <!-- Primary Page Layout
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <div class="container-fluid calc-app">
-    <div class="row">
+  <div class="container-fluid">
+    <div class="row header">
       <div class="twelve columns">
         <h1>BMR Mileage Calculator</h1>
+        <p>Complete this form to estimate your students' logged miles.</p>
       </div>
     </div>
 
-    <div class="row" id="selectTest">
-      <div class="one-half column">
-        <h3>Select fitness test:</h3>        
+    <div class="row calc-app" id="selectTest">
+      <div class="two-thirds column">
+        <h3>Select fitness test:</h3>
         <button onclick="$('#ftMiles').toggleClass('hide');$('#selectTest').toggleClass('hide');">
           Fixed Distance Test
         </button>
@@ -60,9 +61,9 @@
       </div>
     </div>
 
-    <div class="row hide" id="ftMiles">
+    <div class="row hide calc-app" id="ftMiles">
       <div class="two-thirds column">
-        <h4>Fitness Testing - Timed Mile</h4>
+        <h4>Fitness Testing - Timed Mile <small><a href="fitness.html">(go back)</a></small></h4>
         <form onsubmit="return ftMilesCalc()">
           <label for="numFtMiles">Number of students</label>
           <input required class="u-full-width" type="number" id="numFtMiles"/>
@@ -89,9 +90,9 @@
       </div>
     </div>
 
-    <div class="row hide" id="ftPacer">
+    <div class="row hide calc-app" id="ftPacer">
       <div class="two-thirds column">
-        <h4>Fitness Testing - Pacer Test</h4>
+        <h4>Fitness Testing - Pacer Test <small><a href="fitness.html">(go back)</a></small></h4>
         <form onsubmit="return ftPacerCalc()">
           <label for="numFtPacer">Number of students</label>
           <input required class="u-full-width" type="number" id="numFtPacer">
