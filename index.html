@@ -15,6 +15,8 @@
 
   <!-- FONT
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <script src="https://use.typekit.net/gst0xpt.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,400italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
 
@@ -41,251 +43,110 @@
 
   <!-- Primary Page Layout
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <div class="container-fluid calc-app">
+  <div class="container-fluid">
 
     <!-- Select Activity Type
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-    <div class="row">
-      <div class="twelve columns">
-        <h1>BMR Mileage Calculator</h1>
-        <p>To use the calculator, first select the type of activity you are logging from the options below:</p>
-
-        <div class="activities">
+    <div class="row header">
+      <h1>BMR Mileage Calculator</h1>
+      <p>To use the calculator, first select the type of activity you are logging from the options below:</p>
+    </div>
+    <div class="row calc-app">
+      <div class="twelve columns activity-choices">
           <div class="row">
-            <div class="two-thirds column">
-              <h4>Warmup Laps or Fitness</h4>
-              <p>If your students regularly do warmup laps or other walking and running but laps aren’t tracked, click on this tool to estimate mileage.</p>
-              <input class="button" type="button" value="warmup laps" onclick="showForm('#warmup');">
-            </div>
+            <a href="warmup.html" class="activity">
+              <div class="description">
+                <div class="one-third column u-pull-right" align="center">
+                  <img src="img/walkrun.png" class="u-max-full-width">
+                </div>
+                <div class="two-thirds column">
+                  <h4>Warmup Laps or Fitness</h4>
+                  <p>Estimate mileage from timed warmup activities.</p>
+                  <!-- <input class="button" type="button" value="warmup laps" onclick="showForm('#warmup');"> -->
+                </div>
+              </div>
+            </a>
           </div>
 
           <div class="row">
-            <div class="two-thirds column">
-              <h4>Walk to School</h4>
-              <p>If a number of your students walk to school, click this tool to estimate their mileage from commuting.</p>
-              <input class="button" type="button" value="Walk to school" onclick="showForm('#commute');">
-            </div>
+            <a href="commute.html" class="activity">
+              <div class="description">
+                <div class="one-third column u-pull-right" align="center">
+                  <img src="img/commute.png" class="u-max-full-width">
+                </div>
+                <div class="two-thirds column">
+                  <h4>Walk to School</h4>
+                  <p>If a number of your students walk to school, click this tool to estimate their mileage from commuting.</p>
+                  <!-- <input class="button" type="button" value="Walk to school" onclick="showForm('#commute');"> -->
+                </div>
+              </div>
+            </a>
           </div>
 
           <div class="row">
-            <div class="two-thirds column">
-              <h4>Fun run</h4>
-              <p>Use this tool to estimate the total mileage students log during a community fun run/ 5k.</p>
-              <input class="button" type="button" value="Fun run" onclick="showForm('#funrun');">
-            </div>
+            <a href="funrun.html" class="activity">
+              <div class="description">
+                <div class="one-third column u-pull-right" align="center">
+                  <img src="img/events.png" class="u-max-full-width">
+                </div>
+                <div class="two-thirds column">
+                  <h4>Fun run</h4>
+                  <p>Use this tool to estimate the total mileage students log during a community fun run/ 5k.</p>
+                  <!-- <input class="button" type="button" value="Fun run" onclick="showForm('#funrun');"> -->
+                </div>
+              </div>
+            </a>
           </div>
 
           <div class="row">
-            <div class="two-thirds column">
-              <h4>Walk/ Jogathon</h4>
-              <p>If your students participated in a community fun-run, where time was tracked rather than miles, use this tool. </p>
-              <input class="button" type="button" value="Walk/ Jogathon" onclick="showForm('#walkjog');">
-            </div>
+            <a href="walkathon.html" class="activity">
+              <div class="description">
+                <div class="one-third column u-pull-right" align="center">
+                  <img src="img/events.png" class="u-max-full-width">
+                </div>
+                <div class="two-thirds column">
+                  <h4>Walk/ Jogathon</h4>
+                  <p>If your students participated in a community fun-run, where time was tracked rather than miles, use this tool. </p>
+                  <!-- <input class="button" type="button" value="Walk/ Jogathon" onclick="showForm('#walkjog');"> -->
+                </div>
+              </div>
+            </a>
           </div>
 
           <div class="row">
-            <div class="two-thirds column">
-              <h4>Pedometer-measured activity</h4>
-              <p>If your students track steps with a pedometer, use this tool to estimate their mileage from steps</p>
-              <input class="button" type="button" value="pedometer" onclick="showForm('#pedom');">
-            </div>
+            <a href="pedometer.html" class="activity">
+              <div class="description">
+                <div class="one-third column u-pull-right" align="center">
+                  <img src="img/pedometer.png" class="u-max-full-width">
+                </div>
+                <div class="two-thirds column">
+                  <h4>Pedometer-measured activity</h4>
+                  <p>If your students track steps with a pedometer, use this tool to estimate their mileage from steps</p>
+                  <!-- <input class="button" type="button" value="pedometer" onclick="showForm('#pedom');"> -->
+                </div>
+              </div>
+            </a>
           </div>
 
           <div class="row">
-            <div class="two-thirds column">
-              <h4>Fitness Testing</h4>
-              <p>
-                Use these tools to estimate your students' mileage from fitness evaluation tests.
-              </p>
-              <input class="button" type="button" value="fixed distance" onclick="showForm('#ftMiles');">
-              <input class="button" type="button" value="PACER Test" onclick="showForm('#ftPacer');">
-            </div>
+            <a href="fitness.html" class="activity">
+              <div class="description">
+                <div class="one-third column u-pull-right" align="center">
+                  <img src="img/fitness.png" class="u-max-full-width">
+                </div>
+                <div class="two-thirds column">
+                  <h4>Fitness Testing</h4>
+                  <p>
+                    Use these tools to estimate your students' mileage from fitness evaluation tests.
+                  </p>
+                </div>
+              </div>
+            </a>
           </div>
 
-<!-- Activity Selector Template
-          <div class="row">
-            <div class="two-thirds column">
-              <h4></h4>
-              <p></p>
-              <input class="button" type="button" value="" onclick="showForm('#');">
-            </div>
-          </div>
--->
-
-
-        </div>        
+        <!-- </div>         -->
       </div>
     </div>
-
-      <!-- Calculator Forms
-    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-
-
-
-
-    <div class="row">
-      <div class="one-half column" id="funrun">
-        <h4>Fun Run mileage calculator</h4>
-        <form onsubmit="return funrunCalc()">
-          <label for="numFunrun">Number of students participating</label>
-          <input required class="u-full-width" type="number" id="numFunrun">
-          <label for="distFunRun">Distance of run</label>
-          <input required type="number" step="any" id="distFunrun">
-          <select id="unitFunrun">
-            <option value="mi">Miles</option>
-            <option value="km">Kilometers</option>
-          </select>
-
-          
-          <div class="row">
-            <div class="one-half column">
-              <input class="button-primary u-full-width" type="submit" value="Calculate">
-            </div>
-            <div class="one-half column">
-              <a class="button" href="index.html">Go Back</a>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="one-half column" id="walkjog">
-        <h4></h4>
-        <form onsubmit="return walkjogCalc()">
-          <label for="numWalkjog">Number of students participating</label>
-          <input required class="u-full-width" type="number" id="numWalkjog">
-          <label for="durWalkjog">Average duration</label>
-          <input required type="number" step="any" id="durWalkjog"> Minutes
-          <label for="paceWalkjog">Average pace of walk/ jogathon</label>
-          <select class="u-full-width" id="paceWalkjog">
-            <option value="30">Walk (~ 30 minute mile)</option>
-            <option value="20">Walk/ Jog (~ 20 minute mile)</option>
-            <option value="15">Jog (~ 15 minute mile)</option>
-            <option value="10">Run (~ 10 minute mile)</option>
-          </select>
-          
-          <div class="row">
-            <div class="one-half column">
-              <input class="button-primary u-full-width" type="submit" value="Calculate">
-            </div>
-            <div class="one-half column">
-              <a class="button" href="index.html">Go Back</a>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="one-half column" id="pedom">
-        <h4></h4>
-        <form onsubmit="return pedomCalc()">
-          <label for="numPedom">Number of students</label>
-          <input required class="u-full-width" type="number" id="numPedom">
-          <label for="distPedom">Average number of steps</label>
-          <input required class="u-full-width" type="number" id="distPedom">
-<!-- tabling tall/short proportion for now
-          <label for="tallPedom">Percentage of tall students</label>
-          <input required class="u-full-width" type="number" step="any" id="tallPedom">
- -->
-          
-          <div class="row">
-            <div class="one-half column">
-              <input class="button-primary u-full-width" type="submit" value="Calculate">
-            </div>
-            <div class="one-half column">
-              <a class="button" href="index.html">Go Back</a>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="one-half column" id="ftMiles">
-        <h4>Fitness Testing - Timed Mile</h4>
-        <form onsubmit="return ftMilesCalc()">
-          <label for="numFtMiles">Number of students</label>
-          <input required class="u-full-width" type="number" id="numFtMiles"/>
-          <label for="distFtMiles">Distance of test</label>
-          <select class="u-full-width" id="distFtMiles">
-            <option value="1/4">1/4 Mile</option>
-            <option value="1/2">1/2 Mile</option>
-            <option value="1/1" selected="selected">1 Mile</option>
-            <option value="3/2">1 1/2 Mile</option>
-          </select>
-          <!-- <input type="range" min="0.25" max="1.5" step="0.25" value="1" id="distFtMiles" /> -->
-          <label for="lapsFtMiles">Number of attempts</label>
-          <input required class="u-full-width" type="number" id="lapsFtMiles"/>
-          
-          <div class="row">
-            <div class="one-half column">
-              <input class="button-primary u-full-width" type="submit" value="Calculate">
-            </div>
-            <div class="one-half column">
-              <a class="button" href="index.html">Go Back</a>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="one-half column" id="ftPacer">
-        <h4>Fitness Testing - Pacer Test</h4>
-        <form onsubmit="return ftPacerCalc()">
-          <label for="numFtPacer">Number of students</label>
-          <input required class="u-full-width" type="number" id="numFtPacer">
-          <label for="lapFtPacer">Average Number of Laps Completed</label>
-          <input required class="u-full-width" type="number" id="lapFtPacer">
-          <label for="lenFtPacer">PACER Test Length</label>
-          <select class="u-full-width" id="lenFtPacer">
-            <option value="15">15 Meters</option>
-            <option value="20">20 Meters</option>
-          </select>
-          
-          <div class="row">
-            <div class="one-half column">
-              <input class="button-primary u-full-width" type="submit" value="Calculate">
-            </div>
-            <div class="one-half column">
-              <a class="button" href="index.html">Go Back</a>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-
-
-<!--  Calculator Form Template
-      <div class="one-half column hide" id="">
-        <h4></h4>
-        <form onsubmit="return Calc()">
-          <label for=""></label>
-          <input class="u-full-width" id="num">
-          
-          <div class="row">
-            <div class="one-half column">
-              <input class="button-primary u-full-width" type="submit" value="Calculate">
-            </div>
-            <div class="one-half column">
-              <a class="button" href="index.html">Go Back</a>
-            </div>
-          </div>
-        </form>
-      </div>
--->
-
-    <!-- Result
-    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-    <div class="row hide" id="result">
-      <div class="twelve column">
-        <h4>Number of Miles: &nbsp; <span id="miles"></span></h4>
-      </div>
-      <a class="button button-primary" href="http://billionmilerace.org/login/#login-form" target="_blank">Log miles!</a>
-    </div>
-
   </div>
 
 <!-- End Document
