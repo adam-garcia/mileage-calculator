@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <meta charset="utf-8">
+  <title>BMR Mileage Calculator</title>
+  <meta name="description" content="simple mileage calculator">
+  <meta name="author" content="Adam Garcia">
+
+  <!-- Mobile Specific Metas
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,400italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+
+  <!-- CSS
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/page.css">
+
+  <!-- JS
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="https://browserstate.github.io/history.js/scripts/bundled/html4+html5/jquery.history.js"></script>
+  <script type="text/javascript">
+  </script>
+  <script src="calc.js"></script>
+
+  <!-- Favicon
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  <link rel="icon" type="image/png" href="images/favicon.png"> -->
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <div class="container-fluid calc-app">
+    <div class="row">
+      <div class="twelve columns">
+        <h1>BMR Mileage Calculator</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="one-half column" id="commute">
+        <h4>Walk to school mileage calculator</h4>
+        <form onsubmit="return commuteCalc()">
+          <label for="numCommute">Number of students</label>
+          <input required class="u-full-width" type="number" id="numCommute">
+          <label for="distCommute">Average distance of walk</label>
+          <input required type="number" step="any" id="distCommute"> Miles
+          <label for="dirCommute">Direction</label>
+          <select class="u-full-width" id="dirCommute">
+            <option value="2">Students walk to and from school</option>
+            <option value="1">Students only walk one-way</option>
+          </select>
+
+          <div class="row">
+            <div class="one-half column">
+              <input class="button-primary u-full-width" type="submit" value="Calculate">
+            </div>
+            <div class="one-half column">
+              <a class="button u-full-width" href="index.html">all activities</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Result
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <div class="row hide" id="result">
+      <div class="twelve column">
+        <h4>Number of Miles: &nbsp; <span id="miles"></span></h4>
+      </div>
+      <a class="button button-primary" href="http://billionmilerace.org/login/#login-form" target="_blank">Log miles!</a>
+    </div>
+
+  </div>
+
+<!-- End Document
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+</body>
+</html>
