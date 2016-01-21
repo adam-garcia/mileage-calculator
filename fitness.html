@@ -61,8 +61,8 @@
       </div>
     </div>
 
-    <div class="row hide calc-app" id="ftMiles">
-      <div class="two-thirds column">
+    <div class="row hide form-wrapper" id="ftMiles">
+      <div class="two-thirds column offset-by-two calc-form">
         <h4>Fitness Testing - Timed Mile <small><a href="fitness.html">(go back)</a></small></h4>
         <form onsubmit="return ftMilesCalc()">
           <label for="numFtMiles">Number of students</label>
@@ -90,8 +90,8 @@
       </div>
     </div>
 
-    <div class="row hide calc-app" id="ftPacer">
-      <div class="two-thirds column">
+    <div class="row hide form-wrapper" id="ftPacer">
+      <div class="two-thirds column offset-by-two calc-form">
         <h4>Fitness Testing - Pacer Test <small><a href="fitness.html">(go back)</a></small></h4>
         <form onsubmit="return ftPacerCalc()">
           <label for="numFtPacer">Number of students</label>
@@ -109,7 +109,7 @@
               <input class="button-primary u-full-width" type="submit" value="Calculate">
             </div>
             <div class="one-half column">
-              <a class="button u-full-width" href="index.html">all activities</a>
+              <a class="button u-full-width all-activities" href="index.html"><i class="fa fa-reply"></i> &nbsp; all activities</a>
             </div>
           </div>
         </form>
@@ -120,10 +120,10 @@
     <!-- Result
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
     <div class="row hide" id="result">
-      <div class="twelve column">
+      <div class="two-thirds column offset-by-two">
         <h4>Number of Miles: &nbsp; <span id="miles"></span></h4>
-      </div>
       <a class="button button-primary" href="http://billionmilerace.org/login/#login-form" target="_blank">Log miles!</a>
+      </div>
     </div>
 
   </div>

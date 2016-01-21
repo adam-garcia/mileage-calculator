@@ -6,6 +6,11 @@ body {
   color: #222; 
 }
 
+.hide {
+  display: none;
+}
+
+
 code {
   font-family: "Droid Sans Mono", "Courier New", Courier, monospace;
 }
@@ -14,8 +19,34 @@ div.calc-app {
     padding: 2.5%;
   }
 
+div.form-wrapper {
+  background: rgb(247, 173, 29);
+  /*padding-top: 5%;*/
+  padding-top: 2.5%;
+  color: white;
+}
+
+form > input,
+form > select{
+  color: #333;
+  border-radius: 0 !important;
+}
+
+a.all-activities {
+  background: #85c423;
+  color: white;
+  border: none;
+}
+
+a.all-activities:hover {
+  color: white;
+  background: rgb(118, 174, 31);
+  border: none;
+}
+
 div.calc-form {
-  margin: 0 auto;
+  padding: 5%;
+  background: rgb(233, 132, 0);
 }
 
 div.header {
@@ -23,33 +54,6 @@ div.header {
   padding: 2.5%;
 }
 
-.hide {
-  display: none;
-}
-
-/*.activity {
-  border-bottom: 1px solid lightgrey;
-  margin-top: 1.5rem;
-}
-
-.activity {
-  background: rgb(247, 173, 29);
-}
-
-.activity > a {
-  color: #fff;
-  background: rgb(233, 132, 0);
-  width: 100%; height: 100%;
-}*/
-
-/*.activity-choices {  
-  background: rgb(247, 173, 29);
-}
-
-.activity-choices > .row {
-  margin-bottom: 2.5%;
-}
-*/
 
 a.activity > div {
   border: solid 2px rgb(18, 168, 221);
@@ -58,7 +62,7 @@ a.activity > div {
   padding: 2.5%;
   min-height: 100%;
   overflow: auto;
-  
+  border-radius: 1em;
 }
 
 a.activity > div:hover {
@@ -73,6 +77,16 @@ div > img {
 small > a {
   color: #c3c3c3;
   text-decoration: none;
+}
+
+#result {
+  padding-top: 2.5%;
+} 
+
+#result > div {
+  background: rgb(233, 132, 0);
+  color: white;
+  padding: 2.5%;
 }
 
 /* Media Queries
