@@ -119,62 +119,12 @@
 
       <!-- Calculator Forms
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-    <div class="row">
-      <div class="one-half column hide" id="warmup">
-        <h4>Warmup Mileage Calculator</h4>
-        <form onsubmit="return warmupCalc()">
-          <label for="numWarmup">Number of students</label>
-          <input required class="u-full-width" type="number" id="numWarmup">
-          <label for="durWarmup">Average duration of warmup</label>
-          <input required  type="number" step="any" id="durWarmup"> Minutes
-          <label for="paceWarmup">Average pace of warmup</label>
-          <select class="u-full-width" id="paceWarmup">
-            <option value="30">Walk</option>
-            <option value="20">Walk/ Jog</option>
-            <option value="15">Jog</option>
-            <option value="10">Run</option>
-          </select>
 
-          <div class="row">
-            <div class="one-half column">
-              <input class="button-primary u-full-width" type="submit" value="Calculate">
-            </div>
-            <div class="one-half column">
-              <input class="button u-full-width" type="button" value="go back" onclick="location.reload()">
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
+
+
 
     <div class="row">
-      <div class="one-half column hide" id="commute">
-        <h4>Walk to school mileage calculator</h4>
-        <form onsubmit="return commuteCalc()">
-          <label for="numCommute">Number of students</label>
-          <input required class="u-full-width" type="number" id="numCommute">
-          <label for="distCommute">Average distance of walk</label>
-          <input required type="number" step="any" id="distCommute"> Miles
-          <label for="dirCommute">Direction</label>
-          <select class="u-full-width" id="dirCommute">
-            <option value="2">Students walk to and from school</option>
-            <option value="1">Students only walk one-way</option>
-          </select>
-
-          <div class="row">
-            <div class="one-half column">
-              <input class="button-primary u-full-width" type="submit" value="Calculate">
-            </div>
-            <div class="one-half column">
-              <input class="button u-full-width" type="button" value="go back" onclick="location.reload()">
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="one-half column hide" id="funrun">
+      <div class="one-half column" id="funrun">
         <h4>Fun Run mileage calculator</h4>
         <form onsubmit="return funrunCalc()">
           <label for="numFunrun">Number of students participating</label>
@@ -192,7 +142,7 @@
               <input class="button-primary u-full-width" type="submit" value="Calculate">
             </div>
             <div class="one-half column">
-              <input class="button u-full-width" type="button" value="go back" onclick="location.reload()">
+              <a class="button" href="index.html">Go Back</a>
             </div>
           </div>
         </form>
@@ -200,7 +150,7 @@
     </div>
 
     <div class="row">
-      <div class="one-half column hide" id="walkjog">
+      <div class="one-half column" id="walkjog">
         <h4></h4>
         <form onsubmit="return walkjogCalc()">
           <label for="numWalkjog">Number of students participating</label>
@@ -209,10 +159,10 @@
           <input required type="number" step="any" id="durWalkjog"> Minutes
           <label for="paceWalkjog">Average pace of walk/ jogathon</label>
           <select class="u-full-width" id="paceWalkjog">
-            <option value="30">Walk</option>
-            <option value="20">Walk/ Jog</option>
-            <option value="15">Jog</option>
-            <option value="10">Run</option>
+            <option value="30">Walk (~ 30 minute mile)</option>
+            <option value="20">Walk/ Jog (~ 20 minute mile)</option>
+            <option value="15">Jog (~ 15 minute mile)</option>
+            <option value="10">Run (~ 10 minute mile)</option>
           </select>
           
           <div class="row">
@@ -220,7 +170,7 @@
               <input class="button-primary u-full-width" type="submit" value="Calculate">
             </div>
             <div class="one-half column">
-              <input class="button u-full-width" type="button" value="go back" onclick="location.reload()">
+              <a class="button" href="index.html">Go Back</a>
             </div>
           </div>
         </form>
@@ -228,7 +178,7 @@
     </div>
 
     <div class="row">
-      <div class="one-half column hide" id="pedom">
+      <div class="one-half column" id="pedom">
         <h4></h4>
         <form onsubmit="return pedomCalc()">
           <label for="numPedom">Number of students</label>
@@ -245,7 +195,7 @@
               <input class="button-primary u-full-width" type="submit" value="Calculate">
             </div>
             <div class="one-half column">
-              <input class="button u-full-width" type="button" value="go back" onclick="location.reload()">
+              <a class="button" href="index.html">Go Back</a>
             </div>
           </div>
         </form>
@@ -253,7 +203,7 @@
     </div>
 
     <div class="row">
-      <div class="one-half column hide" id="ftMiles">
+      <div class="one-half column" id="ftMiles">
         <h4>Fitness Testing - Timed Mile</h4>
         <form onsubmit="return ftMilesCalc()">
           <label for="numFtMiles">Number of students</label>
@@ -274,7 +224,7 @@
               <input class="button-primary u-full-width" type="submit" value="Calculate">
             </div>
             <div class="one-half column">
-              <input class="button u-full-width" type="button" value="go back" onclick="location.reload()">
+              <a class="button" href="index.html">Go Back</a>
             </div>
           </div>
         </form>
@@ -282,7 +232,7 @@
     </div>
 
     <div class="row">
-      <div class="one-half column hide" id="ftPacer">
+      <div class="one-half column" id="ftPacer">
         <h4>Fitness Testing - Pacer Test</h4>
         <form onsubmit="return ftPacerCalc()">
           <label for="numFtPacer">Number of students</label>
@@ -300,7 +250,7 @@
               <input class="button-primary u-full-width" type="submit" value="Calculate">
             </div>
             <div class="one-half column">
-              <input class="button u-full-width" type="button" value="go back" onclick="location.reload()">
+              <a class="button" href="index.html">Go Back</a>
             </div>
           </div>
         </form>
@@ -320,7 +270,7 @@
               <input class="button-primary u-full-width" type="submit" value="Calculate">
             </div>
             <div class="one-half column">
-              <input class="button u-full-width" type="button" value="go back" onclick="location.reload()">
+              <a class="button" href="index.html">Go Back</a>
             </div>
           </div>
         </form>
