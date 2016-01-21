@@ -70,6 +70,11 @@ div > img {
   width: 25%;
 }
 
+small > a {
+  color: #c3c3c3;
+  text-decoration: none;
+}
+
 /* Media Queries
  * * * * * * * * * * * * * * * * * * * * * * * * */
 @media (min-width: 550px) {
