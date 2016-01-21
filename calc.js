@@ -4,7 +4,6 @@ function showForm (formID) {
     $(formID).toggleClass("hide");
     $(".activities").toggleClass("hide");
     History.pushState(null, null, formID);
-    // fries();
 }
 
 function ftMilesCalc () {
@@ -83,24 +82,3 @@ function displayMiles (miles) {
     }, 2000);
     return false;
 }
-
-
-// Working with Push- and Pop-state
-
-// function fries() {
-//   history.pushState( { 
-//     plate_id: 1, 
-//     plate: "Fries" 
-//   }, null, "/plate/fries");
-
-//   showPlate("Fries");
-// }
-
-
-// window.onpopstate = function (event) {  
-//   var content = "";
-//   if(event.state) {
-//     content = event.state.plate;
-//   }
-//   showPlate(content);
-// }
