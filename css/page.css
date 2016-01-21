@@ -83,6 +83,11 @@ small > a {
   text-decoration: none;
 }
 
+h1 > a {
+  color: #333;
+  text-decoration: none;
+}
+
 #result {
   padding-top: 2.5%;
 } 
