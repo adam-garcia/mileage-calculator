@@ -18,21 +18,68 @@ div.calc-form {
   margin: 0 auto;
 }
 
+div.header {
+  background: #edf7fb;
+  padding: 2.5%;
+}
+
 .hide {
   display: none;
 }
 
-.activities > .row {
+/*.activity {
   border-bottom: 1px solid lightgrey;
   margin-top: 1.5rem;
 }
 
+.activity {
+  background: rgb(247, 173, 29);
+}
+
+.activity > a {
+  color: #fff;
+  background: rgb(233, 132, 0);
+  width: 100%; height: 100%;
+}*/
+
+/*.activity-choices {  
+  background: rgb(247, 173, 29);
+}
+
+.activity-choices > .row {
+  margin-bottom: 2.5%;
+}
+*/
+
+a.activity > div {
+  border: solid 2px rgb(18, 168, 221);
+  color: #333;
+  margin-bottom: 1em;
+  padding: 2.5%;
+  min-height: 100%;
+  overflow: auto;
+  
+}
+
+a.activity > div:hover {
+  background: rgb(18, 168, 221);
+  color: #fff;
+}
+
+div > img {
+  width: 25%;
+}
 
 /* Media Queries
  * * * * * * * * * * * * * * * * * * * * * * * * */
 @media (min-width: 550px) {
-  div.calc-app {
+  div.calc-app,
+  div.header {
     padding: 5%;
+  }
+
+  div > img {
+    width: 50%;
   }
 }
 
