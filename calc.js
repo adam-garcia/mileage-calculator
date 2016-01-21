@@ -3,7 +3,6 @@ var calc = 0;
 function showForm (formID) {
     $(formID).toggleClass("hide");
     $(".activities").toggleClass("hide");
-    History.pushState(null, null, formID);
 }
 
 function ftMilesCalc () {
