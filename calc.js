@@ -77,6 +77,9 @@ function pedomCalc () {
 function displayMiles (miles) {
     $(" #result ").removeClass("hide");
     $(" #miles ").text( miles );
+    $('html, body').animate({
+        scrollTop: $("#result").offset().top
+    }, 2000);
     return false;
 }
 
