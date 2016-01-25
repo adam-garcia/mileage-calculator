@@ -20,7 +20,8 @@ code {
 }
 
 div.calc-app {
-    padding: 2.5%;
+    margin: 0%;
+    /*padding-top: 0;*/
   }
 
 div.form-wrapper {
@@ -96,6 +97,17 @@ h1 > a {
   background: rgb(233, 132, 0);
   color: white;
   padding: 2.5%;
+}
+
+
+.fitness-choice {
+  background: rgb(233, 132, 0);
+  border: none;
+  color: #fff;
+}
+
+.fitness-choice:hover {
+  color: #e5e5e5;
 }
 
 /* Media Queries

@@ -52,10 +52,10 @@
     <div class="row calc-app" id="selectTest">
       <div class="two-thirds column">
         <h3>Select fitness test:</h3>
-        <button onclick="$('#ftMiles').toggleClass('hide');$('#selectTest').toggleClass('hide');">
+        <button class="fitness-choice" onclick="$('#ftMiles').toggleClass('hide');$('#selectTest').toggleClass('hide');">
           Fixed Distance Test
         </button>
-        <button onclick="$('#ftPacer').toggleClass('hide');$('#selectTest').toggleClass('hide');">
+        <button class="fitness-choice" onclick="$('#ftPacer').toggleClass('hide');$('#selectTest').toggleClass('hide');">
           PACER Test
         </button>
       </div>
@@ -83,7 +83,7 @@
               <input class="button-primary u-full-width" type="submit" value="Calculate">
             </div>
             <div class="one-half column">
-              <a class="button u-full-width" href="index.html">all activities</a>
+              <a class="button u-full-width " href="index.html">all activities</a>
             </div>
           </div>
         </form>
