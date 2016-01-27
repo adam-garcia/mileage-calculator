@@ -3,7 +3,10 @@ body {
   line-height: 1.6;
   font-weight: 400;
   font-family: "proxima-nova", "Open Sans" "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #222; 
+  color: #222;
+  min-width: 980px; 
+  max-width: 1230px; 
+  margin: 0 auto; 
 }
 
 h1 {
@@ -15,7 +18,15 @@ h3 {
   text-transform: capitalize;
 }
 
-body.calc {
+.container-fluid {
+  min-height: 100vh;
+}
+
+#choices > div {
+  height: 475px;
+}
+
+body.calc > * {
   background: rgb(247, 173, 29);
 }
 
@@ -75,6 +86,9 @@ div.header  h1 {
   font-size: 6.0rem;
 }
 
+a {
+  text-decoration: none !important;
+}
 
 a.activity > div {
   border: solid 2px rgb(18, 168, 221);

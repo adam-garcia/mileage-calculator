@@ -6,11 +6,11 @@
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <meta charset="utf-8">
   <title>BMR Mileage Calculator</title>
-  <meta name="description" content="simple mileage calculator">
+  <meta content="simple mileage calculator">
   <meta name="author" content="Adam Garcia">
 
   <!-- Mobile Specific Metas
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  - - - - name="description" - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- FONT
@@ -51,65 +51,62 @@
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
     <div class="row header">
       <div class="twelve columns">
-        <img src="img/NB_BMR_logo_horizontal_website_lockup.png" class="u-full-width">
-      </div>
-      <div class="twelve columns">
         <h1><a href="index.html"> Mileage Calculator</a></h1>
         <p>Welcome to our mileage calculator! This tool will help you calculate how many miles your students are racking up, whether they're walking/ running for time, covering a fixed distance, or using pedometers to track their steps. Post those miles to your school's profile and then get pumped to do even more!</p>
       </div>
     </div>
 
-    <div class="row calc-app"><!-- style="width: 50%; margin: 0 auto" -->
-      <div class="twelve columns activity-choices">
+    <div class="row calc-app">
+        <div class="row" id="choices">
 
-        <div class="row">
-          <a href="timed-activity.html" class="activity">
-            <div class="description">
-              <div class="one-third column u-pull-right" align="center">
-                <img src="img/walkrun.png" class="u-max-full-width">
+          <div class="one-third column">
+            <a href="timed-activity.html" class="activity">
+              <div>
+                <div style="height: 160px" align="center">
+                  <img src="img/walkrun.png" class="u-max-full-width">
+                </div>
+                <div class="description">
+                  <h4>Walking or Running for Time</h4>
+                  <p>
+                    Do you have kids running for a certain amount of time but don't track distance? All those miles can count in the Billion Mile Race! Use this calculator to estimate how many miles kids at your school have covered.
+                  </p>
+                </div>
               </div>
-              <div class="two-thirds column">
-                <h4>Walking or Running for Time</h4>
-                <p>
-                  Do you have kids running for a certain amount of time but don't track distance? All those miles can count in the Billion Mile Race! Use this calculator to estimate how many miles kids at your school have covered.
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
+            </a>
+          </div>
 
 
-        <div class="row">
-          <a href="distance-activity.html" class="activity">
-            <div class="description">
-              <div class="one-third column u-pull-right" align="center">
-                <img src="img/events.png" class="u-max-full-width">
+          <div class="one-third column">
+            <a href="distance-activity.html" class="activity">
+              <div>
+                <div style="height: 160px" align="center">
+                  <img src="img/events.png" class="u-max-full-width">
+                </div>
+                <div class="description">
+                  <h4>Walking or Running over a Fixed Distance</h4>
+                  <p>
+                    Lots of schools hold fun runs, walk-a-thons, fitness sessions, or other activities where kids all run the same distance. Use this nifty tool to convert that activity to miles you can post to your school's Billion Mile Race profile.
+                  </p>
+                </div>
               </div>
-              <div class="two-thirds column">
-                <h4>Walking or Running over a Fixed Distance</h4>
-                <p>
-                  Lots of schools hold fun runs, walk-a-thons, fitness sessions, or other activities where kids all run the same distance. Use this nifty tool to convert that activity to miles you can post to your school's Billion Mile Race profile.
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
+            </a>
+          </div>
 
-        <div class="row">
-          <a href="pedometer-activity.html" class="activity">
-            <div class="description">
-              <div class="one-third column u-pull-right" align="center">
-                <img src="img/pedometer.png" class="u-max-full-width">
+          <div class="one-third column">
+            <a href="pedometer-activity.html" class="activity">
+              <div>
+                <div style="height: 160px" align="center">
+                  <img src="img/pedometer.png" class="u-max-full-width">
+                </div>
+                <div class="description">
+                  <h4>Walking or Running with Pedometers</h4>
+                  <p>
+                    If your kids wear pedometers during walking/ running activities, you can use this tool to convert those steps into miles you can log to your school's profile.
+                  </p>
+                </div>
               </div>
-              <div class="two-thirds column">
-                <h4>Walking or Running with Pedometers</h4>
-                <p>
-                  If your kids wear pedometers during walking/ running activities, you can use this tool to convert those steps into miles you can log to your school's profile.
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
+            </a>
+          </div>
 
       </div>
     </div>
@@ -117,5 +114,6 @@
 
 <!-- End Document
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
 </body>
 </html>
