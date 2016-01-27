@@ -88,6 +88,8 @@ div.header  h1 {
 
 a {
   text-decoration: none !important;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 a.activity > div {
@@ -173,7 +175,9 @@ input[type="reset"].button-primary,
 input[type="button"].button-primary {
   color: #FFF;
   background-color: #12a8dd;
-  border-color: #12a8dd; }
+  border-color: #12a8dd; 
+  -webkit-transition: .5s;
+  transition: .5s;}
 .button.button-primary:hover,
 button.button-primary:hover,
 input[type="submit"].button-primary:hover,
