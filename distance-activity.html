@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <meta charset="utf-8">
+  <title>BMR Mileage Calculator</title>
+  <meta name="description" content="simple mileage calculator">
+  <meta name="author" content="Adam Garcia">
+
+  <!-- Mobile Specific Metas
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <script src="https://use.typekit.net/gst0xpt.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,400italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <!-- CSS
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/page.css">
+
+  <!-- JS
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="https://browserstate.github.io/history.js/scripts/bundled/html4+html5/jquery.history.js"></script>
+  <script type="text/javascript">
+  </script>
+  <script src="calc.js"></script>
+
+  <!-- Favicon
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  <link rel="icon" type="image/png" href="images/favicon.png"> -->
+
+</head>
+<body class="calc">
+
+  <!-- Primary Page Layout
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <div class="container-fluid">
+
+
+    <div class="row nav">
+      <div class="four columns">
+        <img src="img/NB_BMR_logo_horizontal_website_lockup.png" class="u-full-width" id="logo">
+      </div>
+      <div class="eight columns nav">
+        <h1><a href="./">Mileage Calculator</a></h1>
+      </div>
+    </div>
+    <!-- Select Activity Type
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <div class="header">
+      <div class="row">
+        <div class="twelve columns">
+          <h1>Walking or Running over a Fixed Distance</h1>
+          <div class="row">
+            <div class="two-thirds column">
+              <p>
+                Lots of schools hold fun runs, walk-a-thons, fitness sessions, or other activities where kids all run the same distance. Use this nifty tool to convert that activity to miles you can post to your school's Billion Mile Race profile.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row form-wrapper">
+      <div class="two-thirds column offset-by-two calc-form" >
+        <h3>let's get started!</h3>
+        <form onsubmit="return displayMiles('dist')">
+          <label for="numStudents">How many kids walked or ran?</label>
+          <input required class="u-full-width" type="number" min="1" max="1000" id="numStudents">
+          
+          <label for="distFunRun">How far was did the kids go?</label>
+          <input required type="number" step="any" id="distance">
+          <select id="units">
+            <option value="1">Miles</option>
+            <option value="1.60934">Kilometers</option>
+          </select>
+          <label for="numGroups">How many times did they do this?</label>
+          <input required class="u-full-width" type="number" min="1" max="" id="numGroups" value="1">
+          
+          <div class="row">
+            <div class="one-half column">
+              <input class="button-primary u-full-width" type="submit" value="Calculate">
+            </div>
+            <div class="one-half column">
+              <a class="button u-full-width all-activities" href="index.html"><i class="fa fa-reply"></i> &nbsp; all activities</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Result
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <div class="row hide" id="result">
+      <div class="two-thirds column offset-by-two">
+        <h4>Number of Miles: &nbsp; <span id="miles"></span></h4>
+      <a class="button button-primary" href="http://billionmilerace.org/login/#login-form" target="_blank">Log miles!</a>
+      </div>
+    </div>
+
+
+
+  </div>
+
+<!-- End Document
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+</body>
+</html>
