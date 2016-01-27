@@ -6,10 +6,10 @@ body {
   color: #222; 
 }
 
-h1 {
+h1, h3 {
   font-family: "league-gothic", "Fjalla One";
-  text-transform: uppercase;
 }
+
 
 body.calc {
   background: rgb(247, 173, 29);
@@ -26,6 +26,7 @@ code {
 
 div.calc-app {
     margin: 0%;
+    /*padding-top: 0;*/
   }
 
 div.form-wrapper {
@@ -58,17 +59,9 @@ div.calc-form {
   background: rgb(233, 132, 0);
 }
 
-div.calc-form > h3 {
-  text-align: center;
-}
-
 div.header {
   background: #edf7fb;
   padding: 2.5%;
-}
-
-div.header  h1 {
-  font-size: 6.0rem;
 }
 
 
@@ -96,8 +89,7 @@ small > a {
   text-decoration: none;
 }
 
-h1 > a,
-h2 > a {
+h1 > a {
   color: #333;
   text-decoration: none;
 }
@@ -123,10 +115,6 @@ h2 > a {
   color: #e5e5e5;
 }
 
-.nav > h1 {
-  text-align: center;
-}
-
 /* Media Queries
  * * * * * * * * * * * * * * * * * * * * * * * * */
 @media (min-width: 550px) {
@@ -137,10 +125,6 @@ h2 > a {
 
   div > img {
     width: 50%;
-  }
-
-  .nav > h1 {
-    text-align: left;
   }
 }
 
@@ -168,16 +152,3 @@ input[type="button"].button-primary:focus {
   color: #FFF;
   background-color: #1093c1;
   border-color: #1093c1; }
-
-
-/* Navbar
- * * * * * * * * * * * * * * * * * * * * * * * * */
-.nav {
-  background: #edf7fb;
-}
-
-.nav > h1 {
-  /*font-size: 4.0rem;*/
-  vertical-align: bottom;
-  padding-left: 20px;
-}
