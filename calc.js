@@ -14,12 +14,8 @@ function displayMiles (type) {
         var dist = eval($( "#distance" ).val());
         miles = Math.floor( num * grp * dist / 2500 )
     }
-
     $(" #result ").removeClass("hide");
     $(" #miles ").text( miles );
-    $('html, body').animate({
-        scrollTop: $("#result").offset().top
-    }, 2000);
-
+    $('html, body').animate({scrollTop: $("#result").offset().top}, 2000);
     return false;
 }
