@@ -8,6 +8,10 @@ div.header {
   padding: 2.5%;
 }
 
+.container-fluid {
+  min-height: 100vh;
+}
+
 .calc > * {
   background: rgb(247, 173, 29);
 }

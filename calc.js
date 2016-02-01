@@ -22,7 +22,7 @@ function displayMiles (type) {
         var num = eval($( "#numStudentsPedom" ).val());
         var grp = eval($( "#numGroupsPedom" ).val());
         var dist = eval($( "#distancePedom" ).val());
-        miles = Math.floor( num * grp * dist / 2500 )
+        miles = Math.floor( num * grp * dist / 2470 )
     }
     $(" #result ").removeClass("hide");
     $(" #miles ").text( miles );
