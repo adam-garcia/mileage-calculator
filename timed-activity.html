@@ -51,9 +51,14 @@
     <div class="header">
       <div class="row">
         <div class="twelve columns">
-          <h1>Timed Walking or Running <small class="u-pull-right"><a href="./">Go Back</a></small></h1>
+          <h1>
+            minutes to miles 
+            <small class="u-pull-right">
+              <a href="./">Go Back</a>
+            </small>
+          </h1>
           <p>
-            Lots of schools have kids run for time rather than distance. Maybe your run club goes for 30 minutes or your PE class does a five-minute warmup jog. This tool will help you convert that time into mileage that you can post to your profile.
+            Do you have kids running for a certain amount of time but don't track distance? All those miles can count in the Billion Mile Race. Convert those minutes to miles and post them to your school’s profile.
           </p>
         </div>
       </div>
@@ -63,26 +68,26 @@
       <div class="two-thirds column offset-by-two calc-form" >
         <h3>let's get started!</h3>
         <form onsubmit="return displayMiles('time')">
-          <label for="numStudents">How many kids walked or ran?</label>
-          <input required class="u-full-width" type="number" min="1" max="1000" id="numStudents">
-          <label for="duration">How long did they go for?</label>
-          <input required type="number" min="1" max="300" id="duration"> Minutes
-          <label for="pace">What was the kids' average pace?</label>
-          <select class="u-full-width" id="pace">
+          <label for="numStudentsTime">How many kids walked or ran?</label>
+          <input required class="u-full-width" type="number" min="1" max="1000" id="numStudentsTime">
+          <label for="durationTime">How long did they go?</label>
+          <input required type="number" min="1" max="300" id="durationTime"> Minutes
+          <label for="paceTime">What was the kids' average pace?</label>
+          <select class="u-full-width" id="paceTime">
             <option value="30">Walk (~ 30 minute mile)</option>
             <option value="20">Walk/ Jog (~ 20 minute mile)</option>
             <option value="15">Jog (~ 15 minute mile)</option>
             <option value="10">Run (~ 10 minute mile)</option>
           </select>
-          <label for="numGroups">How many times did they do this?</label>
-          <input required class="u-full-width" type="number" min="1" max="" id="numGroups" value="1">
+          <label for="numGroupsTime">How many times did they do this?</label>
+          <input required class="u-full-width" type="number" min="1" max="" id="numGroupsTime" value="1">
 
           <div class="row">
             <div class="one-half column">
               <input class="button-primary u-full-width" type="submit" value="Calculate">
             </div>
             <div class="one-half column">
-              <a class="button u-full-width all-activities" href="index.html"><i class="fa fa-reply"></i> &nbsp; all activities</a>
+              <a class="button u-full-width all-activities" href="#" onclick="goBack('timed-activity')"><i class="fa fa-reply"></i> &nbsp; all activities</a>
             </div>
           </div>
         </form>
@@ -94,6 +99,7 @@
     <div class="row hide" id="result">
       <div class="two-thirds column offset-by-two">
         <h4>Number of Miles: &nbsp; <span id="miles"></span></h4>
+        <p id="message"></p>
       <a class="button button-primary" href="http://billionmilerace.org/login/#login-form" target="_blank">Log miles!</a>
       </div>
     </div>

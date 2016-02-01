@@ -52,9 +52,13 @@
     <div class="header">
       <div class="row">
         <div class="twelve columns">
-          <h1>Walking or Running with Pedometers <small class="u-pull-right"><a href="./">Go Back</a></small></h1>
+          <h1>steps to miles 
+            <small class="u-pull-right">
+              <a href="#" onclick="goBack('pedometer-activity')">Go Back</a>
+            </small>
+          </h1>
           <p>
-            If your kids wear pedometers during walking/ running activities, you can use this tool to convert those steps into miles you can log to your school's profile.
+            If your kids wear pedometers during walking/ running activities, convert those steps into miles and add them to your school’s mileage total.
           </p>
         </div>
       </div>
@@ -64,19 +68,19 @@
       <div class="two-thirds column offset-by-two calc-form" >
         <h3>Let's get started!</h3>
         <form onsubmit="return displayMiles('pedom')">
-          <label for="numStudents">How many kids walked or ran?</label>
-          <input required class="u-full-width" type="number" min="1" max="1000" id="numStudents">
-          <label for="distPedom">On average, how many steps did the pedometers read?</label>
-          <input required class="u-full-width" type="number" id="distance">
-          <label for="numGroups">How many times did they do this?</label>
-          <input required class="u-full-width" type="number" min="1" max="100" id="numGroups" value="1">
+          <label for="numStudentsPedom">How many kids walked or ran?</label>
+          <input required class="u-full-width" type="number" min="1" max="1000" id="numStudentsPedom">
+          <label for="distancePedom">On average, how many steps did the pedometers read?</label>
+          <input required class="u-full-width" type="number" id="distancePedom">
+          <label for="numGroupsPedom">How many times did they do this?</label>
+          <input required class="u-full-width" type="number" min="1" max="100" id="numGroupsPedom" value="1">
           
           <div class="row">
             <div class="one-half column">
               <input class="button-primary u-full-width" type="submit" value="Calculate">
             </div>
             <div class="one-half column">
-              <a class="button u-full-width all-activities" href="index.html"><i class="fa fa-reply"></i> &nbsp; all activities</a>
+              <a class="button u-full-width all-activities" href="#" onclick="goBack('pedometer-activity')"><i class="fa fa-reply"></i> &nbsp; all activities</a>
             </div>
           </div>
         </form>
@@ -88,6 +92,7 @@
     <div class="row hide" id="result">
       <div class="two-thirds column offset-by-two">
         <h4>Number of Miles: &nbsp; <span id="miles"></span></h4>
+        <p id="message"></p>
       <a class="button button-primary" href="http://billionmilerace.org/login/#login-form" target="_blank">Log miles!</a>
       </div>
     </div>

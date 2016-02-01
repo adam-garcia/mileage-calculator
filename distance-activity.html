@@ -52,9 +52,14 @@
     <div class="header">
       <div class="row">
         <div class="twelve columns">
-          <h1>Walking or Running over a Fixed Distance <small class="u-pull-right"><a href="./">Go Back</a></small></h1>
+          <h1>
+            distance to miles 
+            <small class="u-pull-right">
+              <a href="#" onclick="goBack('distance-activity')">Go Back</a>
+            </small>
+          </h1>
           <p>
-            Lots of schools hold fun runs, walk-a-thons, fitness sessions, or other activities where kids all run the same distance. Use this nifty tool to convert that activity to miles you can post to your school's Billion Mile Race profile.
+            Lots of schools hold fun runs, walk-a-thons, fitness sessions, or other activities where kids all run the same distance. Convert that activity to miles you can log in Billion Mile Race.
           </p>
         </div>
       </div>
@@ -64,24 +69,24 @@
       <div class="two-thirds column offset-by-two calc-form" >
         <h3>let's get started!</h3>
         <form onsubmit="return displayMiles('dist')">
-          <label for="numStudents">How many kids walked or ran?</label>
-          <input required class="u-full-width" type="number" min="1" max="1000" id="numStudents">
+          <label for="numStudentsDist">How many kids walked or ran?</label>
+          <input required class="u-full-width" type="number" min="1" max="1000" id="numStudentsDist">
           
-          <label for="distFunRun">How far was did the kids go?</label>
-          <input required type="number" step="any" id="distance">
-          <select id="units">
+          <label for="distanceDist">How far did the kids go?</label>
+          <input required type="number" step="any" id="distanceDist">
+          <select id="unitsDist">
             <option value="1">Miles</option>
             <option value="1.60934">Kilometers</option>
           </select>
-          <label for="numGroups">How many times did they do this?</label>
-          <input required class="u-full-width" type="number" min="1" max="" id="numGroups" value="1">
+          <label for="numGroupsDist">How many times did they do this?</label>
+          <input required class="u-full-width" type="number" min="1" max="" id="numGroupsDist" value="1">
           
           <div class="row">
             <div class="one-half column">
               <input class="button-primary u-full-width" type="submit" value="Calculate">
             </div>
             <div class="one-half column">
-              <a class="button u-full-width all-activities" href="index.html"><i class="fa fa-reply"></i> &nbsp; all activities</a>
+              <a class="button u-full-width all-activities" href="#" onclick="goBack('distance-activity')"><i class="fa fa-reply"></i> &nbsp; all activities</a>
             </div>
           </div>
         </form>
@@ -93,6 +98,7 @@
     <div class="row hide" id="result">
       <div class="two-thirds column offset-by-two">
         <h4>Number of Miles: &nbsp; <span id="miles"></span></h4>
+        <p id="message"></p>
       <a class="button button-primary" href="http://billionmilerace.org/login/#login-form" target="_blank">Log miles!</a>
       </div>
     </div>
