@@ -4,8 +4,8 @@ body {
   font-weight: 400;
   font-family: "proxima-nova", "Open Sans" "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #222;
-  min-width: 980px; 
-  max-width: 1230px; 
+  width: 940px;
+  max-width: 940px; 
   margin: 0 auto; 
 }
 
