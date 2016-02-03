@@ -10,7 +10,12 @@ div.header {
 
 div.calc-app {
   background: #fff;
-  padding: 10px;
+  padding: 4%;
+  padding-top: 2%;
+}
+
+div.calc-app > h1 {
+  text-align: center;
 }
 
 .container-fluid {
@@ -53,6 +58,7 @@ a.all-activities:hover {
   background: rgb(118, 174, 31);
   border: none;
 }
+
 
 a {
   text-decoration: none !important;
