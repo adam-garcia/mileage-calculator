@@ -30,9 +30,14 @@ function displayMiles (type) {
     }
     $(" #result ").removeClass("hide");
     $(" #miles ").text( miles );
-    var message = congrats[Math.floor(Math.random()*congrats.length)] + 
-                  "<br>" + directns[Math.floor(Math.random()*directns.length)]
-    $(" #message ").html( message );
+    if (miles > 0) {
+        var message = congrats[Math.floor(Math.random()*congrats.length)] + 
+                      "<br>" + directns[Math.floor(Math.random()*directns.length)]
+        $(" #message ").html( message );
+    } else {
+        var error_msg = "Uh-oh… Our calculator rounds down to the nearest mile, and you weren’t quite there. Try again after another group of kids gets movin’ and you might have better luck!"
+        $(" #message ").html( error_msg );
+    }
     $('html, body').animate({scrollTop: $("#result").offset().top}, 1500);
     return false;
 }
