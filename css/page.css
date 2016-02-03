@@ -130,6 +130,7 @@ h4 > a:hover {
   background: rgb(233, 132, 0);
   color: white;
   padding: 2.5%;
+  margin-bottom: 10vh;
 }
 
 #message {
@@ -212,13 +213,26 @@ button.about:hover{
   padding: 0.5em 0 1em 1em;
 }
 
+.modal-body li {
+  list-style-type: disc;
+  margin-bottom: 0;
+}
+
+.modal-footer {
+  border-top: 1px solid #e5e5e5;
+  text-align: center;
+}
+
 .close-modal {
-    font-size: 2.5em;
     padding-top: 0.25em;
     color: #aaa;
     font-weight: bold;
     -webkit-transition: .5s;
     transition: .5s
+}
+
+.close-modal-x{
+    font-size: 2.5em;
 }
 
 .close-modal:hover,

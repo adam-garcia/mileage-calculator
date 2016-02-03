@@ -97,13 +97,19 @@
       <div class="modal-content">
         <div class="modal-titlebar">
           <span class="modal-title">About this Calculation</span>
-          <sup><div class="close-modal u-pull-right" onclick="hideModal();">×</div></sup>
+          <sup><div class="close-modal close-modal-x u-pull-right" onclick="hideModal();">×</div></sup>
         </div>
         <div class="modal-body">
-          <p>We'd like to be as transparent as possible with these calculators, so here's a quick breakdown! First off, take a quick look at the equation we use to estimate miles:</p>
-          $$ Miles = \frac{kids \times steps}{2470} \times groups $$
-          Not so bad, right? You entered the number of kids as well as the average number of steps, and "How many times..." is the number of groups. You might be wondering where 2470 comes from, though. <a href="http://www.ncbi.nlm.nih.gov/pubmed/3343627" target="_blank">This article</a> found that the average step length in 6-12 year old children was 0.6479 m at a fast paced walk. There are about 1600 meters in a mile, so: 
-          $$ \frac{1600m/mile}{0.6479 m/step} = 2470steps/mile $$
+          <p>The exact number of steps per mile varies from one kid (and one situation) to the next, based on factors like how long their legs are and how fast they’re going. For this calculator, we used a pretty conservative estimate of 2470 steps/mile, based on research about stride lengths in kids ages 6-12. The research found that the average step length for kids aged 6-12 was 0.6479. With about 1600 meters in a mile,</p>
+          $$ \frac{1600m/mile}{0.6479m/step} = 2470steps/mile $$
+          <p>The formula for estimating miles, then is:</p>
+          $$ Miles = \frac{kids \times steps}{2470} \times \# times $$
+
+          <p>If you're as jazzed about research like we are and want to check out the study, here it is!
+          Waters RL, Lunsford BR, Perry J, Byrd R. Energy-speed relationship of walking: standard tables. Journal of Orthopaedic Research. 1988 Mar 1;6(2):215-22. <a href="http://www.ncbi.nlm.nih.gov/pubmed/3343627" target="_blank">[View on PubMed]</a></p> 
+        </div>
+        <div class="modal-footer">
+          <span class="close-modal" onclick="hideModal();">Got it!</span>
         </div>
       </div>
     </div>

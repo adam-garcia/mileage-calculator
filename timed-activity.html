@@ -74,12 +74,12 @@
           <input required type="number" min="0" max="300" placeholder="Minutes" id="durationMin">
           <label for="paceTime">What was the kids' average pace?</label>
           <select class="u-full-width" id="paceTime">
-            <option value="27.5">Light walk</option>
+            <option value="27.5">Easy walk</option>
             <option value="21.4">Moderate walk</option>
-            <option value="17.4">Hard walk</option>
-            <option value="12.8">Light jog</option>
+            <option value="17.4">Fast walk</option>
+            <option value="12.8">Easy jog</option>
             <option value="10.7">Moderate jog</option>
-            <option value="9.1">Hard jog</option>
+            <option value="9.1">Fastjog</option>
           </select>
           <label for="numGroupsTime">How many times did they do this?</label>
           <input required class="u-full-width" type="number" min="1" max="" id="numGroupsTime" value="1">
@@ -106,50 +106,29 @@
         <div class="modal-titlebar">
           <h1>
             About this calculation
-            <sup><div class="close-modal u-pull-right" onclick="hideModal();">×</div></sup>
+            <sup><div class="close-modal close-modal-x u-pull-right" onclick="hideModal();">×</div></sup>
           </h1>
         </div>
         <div class="modal-body">
-          <p>We'd like to be as transparent as possible with these calculators, so here's a quick breakdown! First off, take a quick look at the equation we use to estimate miles:</p>
-          $$ Miles = \frac{kids \times time}{pace} \times groups $$
-          Not so bad, right? You entered the number of kids as well as the time, and "How many times..." is the number of groups. You might be wondering where the "pace" comes from, though. The table below shows the cutpoints we used, which come from <a href="http://www.ncbi.nlm.nih.gov/pubmed/18782458">this article</a> from the International Journal of Behavioral Nutrition and Physical Activity.
-          <table>
-            <tr>
-              <th>Entered Pace</th>
-              <th>Walking speed</th>
-              <th>Mile pace from speed</th>
-              <tr>
-              <td>Light walk</td>
-              <td>2.2 mph</td>
-              <td>27.5 min/mile</td>
-              </tr>
-              <tr>
-              <td>Moderate walk</td>
-              <td>2.81 mph</td>
-              <td>21.4 min/mile</td>
-              </tr>
-              <tr>
-              <td>Hard walk</td>
-              <td>3.44 mph</td>
-              <td>17.4 min/mile</td>
-              </tr>
-              <tr>
-              <td>Light jog</td>
-              <td>4.68 mph</td>
-              <td>12.8 min/mile</td>
-              </tr>
-              <tr>
-              <td>Moderate jog</td>
-              <td>5.63 mph</td>
-              <td>10.7 min/mile</td>
-              </tr>
-              <tr>
-              <td>Hard jog</td>
-              <td>6.57 mph</td>
-              <td>9.1 min/mile</td>
-              </tr>
-            </tr>
-          </table>
+          <p>
+            Different kids walk, run, and jog at different speeds. For this calculator, we used pretty conservative estimates of average pace for each of the different pace categories. Here’s what we used for each one:
+          </p>
+          <ul>
+            <li>Easy walk: 2.2 miles/hour</li>
+            <li>Moderate walk: 2.8 miles/hour</li>
+            <li>Fast walk: 3.4 miles/hour</li>
+            <li>Easy jog: 4.7 miles/hour</li>
+            <li>Moderate jog: 5.6 miles/hour</li>
+            <li>Fast jog: 6.6 miles/hour</li>
+          </ul>
+          <p>The formula for estimating miles, then, is:</p>
+          $$ Miles = \frac{kids \times duration}{pace} \times \# times $$
+          <p>
+            We made the estimates based on research describing typical walking and running speeds in children and teens. Want to check out the paper? Here it is! Ridley K, Ainsworth BE, Olds TS. Development of a compendium of energy expenditures for youth. International Journal of Behavioral Nutrition and Physical Activity. 2008 Sep 10;5(1):45. <a href="http://www.ncbi.nlm.nih.gov/pubmed/18782458" target="_blank">[View on PubMed]</a>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <span class="close-modal" onclick="hideModal();">Got it!</span>
         </div>
       </div>
     </div>
