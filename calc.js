@@ -1,6 +1,8 @@
 var congrats = ["BOOM!",
                 "Way to go!",
-                "Your kids are crushing it!"];
+                "Your kids are crushing it!",
+                "Awesome!",
+                "Keep it up!"];
 
 var directns = ["Click the button below to post those miles to your dashboard."];
 
@@ -9,9 +11,11 @@ function displayMiles (type) {
     if (type == "time") {
         var num = eval($( "#numStudentsTime" ).val());
         var grp = eval($( "#numGroupsTime" ).val());
-        var dur = eval($( "#durationTime" ).val());
+        var durm = eval($( "#durationMin" ).val());
+        var durh = eval(($( "#durationHour" ).val()))*60;
+        if (Number.isNaN(durh)) {durh = 0};
         var pace = eval($( "#paceTime" ).val());
-        miles = Math.floor( num * grp * dur / pace)
+        miles = Math.floor( num * grp * (durm+durh) / pace)
     } else if (type == "dist") {
         var num = eval($( "#numStudentsDist" ).val());
         var grp = eval($( "#numGroupsDist" ).val());
@@ -36,7 +40,6 @@ function displayMiles (type) {
 function showModal () {
     var modal = document.getElementById('about-modal');
     modal.style.display = "block";
-    console.log('aaaa');
 }
 
 function hideModal() {

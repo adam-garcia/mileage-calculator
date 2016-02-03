@@ -33,8 +33,7 @@
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <script src="https://browserstate.github.io/history.js/scripts/bundled/html4+html5/jquery.history.js"></script>
-  <script type="text/javascript">
-  </script>
+  <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"> </script> 
   <script src="calc.js"></script>
 
   <!-- Favicon
@@ -64,15 +63,15 @@
         </div>
       </div>
     </div>
-
     <div class="row form-wrapper">
       <div class="two-thirds column offset-by-two calc-form" >
         <h3>let's get started!</h3>
         <form onsubmit="return displayMiles('time')">
           <label for="numStudentsTime">How many kids walked or ran?</label>
           <input required class="u-full-width" type="number" min="1" max="1000" id="numStudentsTime">
-          <label for="durationTime">How long did they go?</label>
-          <input required type="number" min="1" max="300" id="durationTime"> Minutes
+          <label>How long did they go?</label>
+          <input type="number" min="1" max="5" placeholder="Hours" id="durationHour"> <strong>:</strong>
+          <input required type="number" min="0" max="300" placeholder="Minutes" id="durationMin">
           <label for="paceTime">What was the kids' average pace?</label>
           <select class="u-full-width" id="paceTime">
             <option value="27.5">Light walk</option>
@@ -86,14 +85,72 @@
           <input required class="u-full-width" type="number" min="1" max="" id="numGroupsTime" value="1">
 
           <div class="row">
-            <div class="one-half column">
+            <div class="twelve columns">
               <input class="button-primary u-full-width" type="submit" value="Calculate">
-            </div>
-            <div class="one-half column">
-              <a class="button u-full-width all-activities" href="./"><i class="fa fa-reply"></i> &nbsp; all activities</a>
             </div>
           </div>
         </form>
+          <div class="row">
+            <div class="one-half column">
+              <a class="button u-full-width all-activities" href="./"><i class="fa fa-reply"></i> &nbsp; all activities</a>
+            </div>
+            <div class="one-half column">
+              <button class="about u-full-width" onclick="showModal();">Learn more</button>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="modal" id="about-modal">
+      <div class="modal-content">
+        <div class="modal-titlebar">
+          <h1>
+            About this calculation
+            <sup><div class="close-modal u-pull-right" onclick="hideModal();">×</div></sup>
+          </h1>
+        </div>
+        <div class="modal-body">
+          <p>We'd like to be as transparent as possible with these calculators, so here's a quick breakdown! First off, take a quick look at the equation we use to estimate miles:</p>
+          $$ Miles = \frac{kids \times time}{pace} \times groups $$
+          Not so bad, right? You entered the number of kids as well as the time, and "How many times..." is the number of groups. You might be wondering where the "pace" comes from, though. The table below shows the cutpoints we used, which come from <a href="http://www.ncbi.nlm.nih.gov/pubmed/18782458">this article</a> from the International Journal of Behavioral Nutrition and Physical Activity.
+          <table>
+            <tr>
+              <th>Entered Pace</th>
+              <th>Walking speed</th>
+              <th>Mile pace from speed</th>
+              <tr>
+              <td>Light walk</td>
+              <td>2.2 mph</td>
+              <td>27.5 min/mile</td>
+              </tr>
+              <tr>
+              <td>Moderate walk</td>
+              <td>2.81 mph</td>
+              <td>21.4 min/mile</td>
+              </tr>
+              <tr>
+              <td>Hard walk</td>
+              <td>3.44 mph</td>
+              <td>17.4 min/mile</td>
+              </tr>
+              <tr>
+              <td>Light jog</td>
+              <td>4.68 mph</td>
+              <td>12.8 min/mile</td>
+              </tr>
+              <tr>
+              <td>Moderate jog</td>
+              <td>5.63 mph</td>
+              <td>10.7 min/mile</td>
+              </tr>
+              <tr>
+              <td>Hard jog</td>
+              <td>6.57 mph</td>
+              <td>9.1 min/mile</td>
+              </tr>
+            </tr>
+          </table>
+        </div>
       </div>
     </div>
 
@@ -101,31 +158,17 @@
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
     <div class="row hide" id="result">
       <div class="two-thirds column offset-by-two">
-        <h4>Number of Miles: &nbsp; <span id="miles"></span></h4>
+        <h4>
+          Number of Miles: &nbsp; <span id="miles"></span> <!-- <a href="#" onclick="showModal();">Learn More</a> -->
+        </h4>
         <p id="message"></p>
         <!-- Fill to #result matching div -->
-        <div class="row">
-          <div class="one-half column">
-            <a class="button button-primary u-full-width" href="http://billionmilerace.org/login/#login-form" target="_blank">Log miles!</a>
-          </div>
-          <div class="one-half column">
-            <button class="about u-full-width" onclick="showModal();">Learn more</button>
-          </div>
-        </div>
-
-        <div class="modal" id="about-modal">
-          <div class="modal-content">
-            <div class="modal-titlebar">
-              <span class="modal-title">About this Calculation</span>
-              <sup><div class="close-modal u-pull-right" onclick="hideModal();">×</div></sup>
-            </div>
-            <div class="modal-body">
-              Text goes here!
-            </div>
-          </div>
-        </div>
+        <a class="button button-primary u-full-width" href="http://billionmilerace.org/login/#login-form" target="_blank">Log miles!</a>
       </div>
     </div>
+
+
+
 
 
 
