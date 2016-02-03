@@ -32,3 +32,21 @@ function displayMiles (type) {
     $('html, body').animate({scrollTop: $("#result").offset().top}, 1500);
     return false;
 }
+
+function showModal () {
+    var modal = document.getElementById('about-modal');
+    modal.style.display = "block";
+    console.log('aaaa');
+}
+
+function hideModal() {
+    var modal = document.getElementById('about-modal');
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    var modal = document.getElementById('about-modal');
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}

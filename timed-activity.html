@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -89,7 +90,7 @@
               <input class="button-primary u-full-width" type="submit" value="Calculate">
             </div>
             <div class="one-half column">
-              <a class="button u-full-width all-activities" href="#" onclick="goBack('timed-activity')"><i class="fa fa-reply"></i> &nbsp; all activities</a>
+              <a class="button u-full-width all-activities" href="./"><i class="fa fa-reply"></i> &nbsp; all activities</a>
             </div>
           </div>
         </form>
@@ -102,7 +103,27 @@
       <div class="two-thirds column offset-by-two">
         <h4>Number of Miles: &nbsp; <span id="miles"></span></h4>
         <p id="message"></p>
-      <a class="button button-primary" href="http://billionmilerace.org/login/#login-form" target="_blank">Log miles!</a>
+        <!-- Fill to #result matching div -->
+        <div class="row">
+          <div class="one-half column">
+            <a class="button button-primary u-full-width" href="http://billionmilerace.org/login/#login-form" target="_blank">Log miles!</a>
+          </div>
+          <div class="one-half column">
+            <button class="about u-full-width" onclick="showModal();">Learn more</button>
+          </div>
+        </div>
+
+        <div class="modal" id="about-modal">
+          <div class="modal-content">
+            <div class="modal-titlebar">
+              <span class="modal-title">About this Calculation</span>
+              <sup><div class="close-modal u-pull-right" onclick="hideModal();">×</div></sup>
+            </div>
+            <div class="modal-body">
+              Text goes here!
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
