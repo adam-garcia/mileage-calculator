@@ -35,7 +35,7 @@ function displayMiles (type) {
                       "<br>" + directns[Math.floor(Math.random()*directns.length)]
         $(" #message ").html( message );
     } else {
-        var error_msg = "Uh-oh… Our calculator rounds down to the nearest mile, and you weren’t quite there. Try again after another group of kids gets movin’ and you might have better luck!"
+        var error_msg = "Uh-oh! Our calculator rounds down, and you didn't quite have a whole mile. Try again soon!"
         $(" #message ").html( error_msg );
     }
     $('html, body').animate({scrollTop: $("#result").offset().top}, 1500);
