@@ -144,7 +144,11 @@ h4 > a:hover {
 }
 
 input#durationHour {
-  text-align: right;
+  width: 75px;
+}
+
+input#durationMin {
+  width: 90px;
 }
 
 .hide {
