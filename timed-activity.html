@@ -34,6 +34,14 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"> </script> 
   <script src="calc.js"></script>
+  <noscript>
+    <div class="modal" style="display: block;">
+      <div class="modal-content" style="height: 500px; padding: 15px;">
+        <div style="height: 100px;"></div>
+        <span style="font-size: 2em;">For full functionality of this page it is necessary to enable JavaScript. Here are the <a href="http://www.enable-javascript.com" target="_blank"> instructions how to enable JavaScript in your web browser</a></span>
+      </div> 
+    </div>
+  </noscript> 
 
   <!-- Favicon
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -41,6 +49,7 @@
 
 </head>
 <body class="calc">
+
 
   <!-- Primary Page Layout
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -73,8 +82,8 @@
           <label for="numStudentsTime">How many kids walked or ran?</label>
           <input required class="u-full-width" type="number" min="1" max="5000" id="numStudentsTime">
           <label>How long did they go?</label>
-          <input type="number" min="0" max="5" placeholder="Hours" id="durationHour" class="time"> <strong>:</strong>
-          <input required type="number" min="0" max="300" placeholder="Minutes" id="durationMin" class="time">
+          <input type="number" min="0" max="5" placeholder="Hours" id="durationHour"> <strong>:</strong>
+          <input required type="number" min="0" max="300" placeholder="Minutes" id="durationMin">
           <label for="paceTime">What was the kids' average pace?</label>
           <select class="u-full-width" id="paceTime">
             <option value="27.5">Easy walk</option>
