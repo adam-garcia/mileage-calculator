@@ -19,7 +19,7 @@ function displayMiles (activity) {
         var grp = eval($( "#numGroupsTime" ).val());
         var durm = eval($( "#durationMin" ).val());
         var durh = eval(($( "#durationHour" ).val()))*60;
-        if (Number.isNaN(durh)) {durh = 0};
+        if (isNaN(durh)) {durh = 0};
         var pace = eval($( "#paceTime" ).val());
         miles = Math.floor( num * grp * (durm+durh) / pace)
     } else if (activity == "dist") {
