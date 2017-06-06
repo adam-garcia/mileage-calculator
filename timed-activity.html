@@ -145,15 +145,7 @@
           <p>
             Different kids walk, run, and jog at different speeds. For this calculator, we used pretty conservative estimates of average pace for each of the different pace categories. Here’s what we used for each one:
           </p>
-          <ul>
-            <li>Easy walk: 2.2 miles/hour (roughly a 27.5 minute mile)</li>
-            <li>Moderate walk: 2.8 miles/hour (roughly a 21.4 minute mile)</li>
-            <li>Fast walk: 3.4 miles/hour (roughly a 17.4 minute mile)</li>
-            <li>Easy jog: 4.7 miles/hour (roughly a 12.8 minute mile)</li>
-            <li>Moderate jog: 5.6 miles/hour (roughly a 10.7 minute mile)</li>
-            <li>Fast jog: 6.6 miles/hour (roughly a 9.1. minute mile)</li>
-          </ul>
-<!--           <table style="margin-top: 0;" align="center">
+          <table id="distance-table">
             <tr>
               <th style="padding-top: 4px">Pace</th>
               <th style="padding-top: 4px">Miles/hour</th>
@@ -189,11 +181,14 @@
               <td style="text-align: right">6.6</td>
               <td style="text-align: right">9.1</td>
             </tr>
-          </table> -->
-          <p>The formula for estimating miles, then, is:</p>
-          $$ Miles = \frac{kids \times duration}{pace^{*}} \times \# times $$
+          </table>
+          <p>The formula for estimating miles is:</p>
+          $$ Miles = \frac{kids \times duration^{*}}{pace^{\dagger}} \times \# times $$
           <p>
-            &#42;Here, <em>pace</em> is in minutes per mile. <br/>
+            <sup>&#42;</sup><em>Duration</em> is in minutes. <br />
+            <sup>&dagger;</sup><em>Pace</em> is in minutes/mile. <br/>
+          </p>
+          <p>
             We made the estimates based on research describing typical walking and running speeds in children and teens. Want to check out the paper? Here it is! Ridley K, Ainsworth BE, Olds TS. Development of a compendium of energy expenditures for youth. International Journal of Behavioral Nutrition and Physical Activity. 2008 Sep 10;5(1):45. <a href="http://www.ncbi.nlm.nih.gov/pubmed/18782458" target="_blank">[View on PubMed]</a>
           </p>
         </div>
@@ -203,9 +198,11 @@
       </div>
     </div>
   </div>
-    <style type="text/css">
-    th, td { margin: 2px 15px; }
-  </style>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      showModal();
+    })
+  </script>
 
 <!-- End Document
   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
